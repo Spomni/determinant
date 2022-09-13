@@ -1,0 +1,14 @@
+{
+  "name": "determinant",
+  "version": "0.0.0",
+  "description": "Caluculate determinant of the matrix",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "error: test command is not specified"
+  },
+  "author": "spomni",
+  "license": "UNLICENSED"
+}
