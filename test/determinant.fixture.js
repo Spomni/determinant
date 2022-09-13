@@ -66,9 +66,25 @@ const matrix2x2Array = [
   ],
 ]
 
+const matrix1x1Array = [
+  [
+    [[0]],
+    0
+  ],
+  [
+    [[32]],
+    32
+  ],
+  [
+    [[-17]],
+    -17
+  ],
+]
+
 module.exports = {
   notMatrixArray,
   notSquareMatrixArray,
   notMatrixOfNumbersArray,
   matrix2x2Array,
+  matrix1x1Array,
 }
