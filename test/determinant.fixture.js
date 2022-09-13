@@ -39,8 +39,36 @@ const notMatrixOfNumbersArray = [
   ]
 ]
 
+// [
+//   [matrix, determinant]
+// ]
+const matrix2x2Array = [
+  [
+    [
+      [1, 2],
+      [3, 4],
+    ],
+    -2
+  ],
+  [
+    [
+      [0, 0],
+      [2, 3]
+    ],
+    0
+  ],
+  [
+    [
+      [-11, 12],
+      [-21, 22]
+    ],
+    10
+  ],
+]
+
 module.exports = {
   notMatrixArray,
   notSquareMatrixArray,
   notMatrixOfNumbersArray,
+  matrix2x2Array,
 }
