@@ -33,6 +33,20 @@ function isSquareMatrix(matrix) {
   return m === n
 }
 
+function isMatrixOfNumbers(matrix) {
+  
+  const m = matrix.length
+  const n = matrix[0].length
+
+  for (let i=0; i<m; i++) {
+    for (let j=0; j<n; j++) {
+      if (typeof matrix[i][j] !== 'number') return false
+    }
+  }
+  
+  return true
+}
+
 class InvalidMatrixError extends TypeError {
   constructor() {
     super('Passed value must be a square matric of numbers')
@@ -42,7 +56,8 @@ class InvalidMatrixError extends TypeError {
 function isSquareMatrixOfNumbers(value) {
   if (
     isMatrix(value) &&
-    isSquareMatrix(value)
+    isSquareMatrix(value) &&
+    isMatrixOfNumbers(value)
   ) {
     return true
   } else {

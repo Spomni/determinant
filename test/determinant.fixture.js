@@ -24,7 +24,23 @@ const notSquareMatrixArray = [
   ],
 ]
 
+const notMatrixOfNumbersArray = [
+  [
+    ['11']
+  ],
+  [
+    [11, 12],
+    [21, null]
+  ],
+  [
+    [11, 12, 13],
+    [21, true, 23],
+    [31, 32, 33]
+  ]
+]
+
 module.exports = {
   notMatrixArray,
   notSquareMatrixArray,
+  notMatrixOfNumbersArray,
 }

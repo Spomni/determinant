@@ -4,6 +4,7 @@ const { determinant } = require('../')
 const {
   notMatrixArray,
   notSquareMatrixArray,
+  notMatrixOfNumbersArray,
 } = require('./determinant.fixture.js')
 
 describe('determinant():', () => {
@@ -28,7 +29,14 @@ describe('determinant():', () => {
       })
     })
 
-    it('any item of passed matrix is not number')
+    it('any item of passed matrix is not number', () => {
+      notMatrixOfNumbersArray.forEach((matrix) => {
+        assert.throws(
+          () => determinant(matrix),
+          TypeError
+        )
+      })
+    })
   })
   
   describe('should calculate determinant of the matrix:', () => {
