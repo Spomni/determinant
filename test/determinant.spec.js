@@ -1,11 +1,42 @@
 const { assert } = require('chai')
 
+const { determinant } = require('../')
+const {
+  notMatrixArray,
+  notSquareMatrixArray,
+  notMatrixOfNumbersArray,
+} = require('./determinant.fixture.js')
+
 describe('determinant():', () => {
 
   describe('should throw an error if the passed value is not a square matrix of numbers', () => {
-    it('passed value is not matrix')
-    it('passed matrix is not square')
-    it('any item of passed matrix is not number')
+ 
+    it('passed value is not matrix', () => {
+      notMatrixArray.forEach((value) => {
+        assert.throws(
+          () => determinant(value),
+          TypeError
+        )
+      })
+    })
+
+    it('passed matrix is not square', () => {
+      notSquareMatrixArray.forEach((matrix) => {
+        assert.throws(
+          () => determinant(matrix),
+          TypeError
+        )
+      })
+    })
+
+    it('any item of passed matrix is not number', () => {
+      notMatrixOfNumbersArray.forEach((matrix) => {
+        assert.throws(
+          () => determinant(matrix),
+          TypeError
+        )
+      })
+    })
   })
   
   describe('should calculate determinant of the matrix:', () => {
