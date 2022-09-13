@@ -8,12 +8,13 @@ const {
   matrix2x2Array,
   matrix1x1Array,
   matrix3x3Array,
+  matrixArray,
 } = require('./determinant.fixture.js')
 
 describe('determinant():', () => {
 
   describe('should throw an error if the passed value is not a square matrix of numbers', () => {
- 
+
     it('passed value is not matrix', () => {
       notMatrixArray.forEach((value) => {
         assert.throws(
@@ -62,6 +63,10 @@ describe('determinant():', () => {
       })
     })
 
-    it('any size')
+    it('any size', () => {
+      matrixArray.forEach(([matrix, det]) => {
+        assert.strictEqual(determinant(matrix), det)
+      })
+    })
   })
 })
