@@ -7,8 +7,12 @@
     "test": "test"
   },
   "scripts": {
-    "test": "error: test command is not specified"
+    "test": "mocha"
   },
   "author": "spomni",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0"
+  }
 }
