@@ -48,15 +48,12 @@ function isMatrixOfNumbers(matrix) {
 }
 
 function isSquareMatrixOfNumbers(value) {
-  if (
-    isMatrix(value) &&
-    isSquareMatrix(value) &&
-    isMatrixOfNumbers(value)
-  ) {
-    return true
-  } else {
-    return false
-  }
+
+  if (!isMatrix(value)) return false
+  if (!isSquareMatrix(value)) return false
+  if (!isMatrixOfNumbers(value)) return false
+
+  return true
 }
 
 module.exports = {
