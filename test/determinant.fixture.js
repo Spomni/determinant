@@ -81,10 +81,38 @@ const matrix1x1Array = [
   ],
 ]
 
+const matrix3x3Array = [
+  [
+    [
+      [1, 2, 3],
+      [4, 5, 6],
+      [7, 8, 9],
+    ],
+    0
+  ],
+  [
+    [
+      [11, 12, 13],
+      [-21, 22, 23],
+      [31, 32, -33],
+    ],
+    -33444
+  ],
+  [
+    [
+      [5, 6, 7],
+      [8, 9, 5],
+      [3, 2, 3],
+    ],
+    -46
+  ],
+]
+
 module.exports = {
   notMatrixArray,
   notSquareMatrixArray,
   notMatrixOfNumbersArray,
   matrix2x2Array,
   matrix1x1Array,
+  matrix3x3Array,
 }

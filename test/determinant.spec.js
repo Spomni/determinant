@@ -7,6 +7,7 @@ const {
   notMatrixOfNumbersArray,
   matrix2x2Array,
   matrix1x1Array,
+  matrix3x3Array,
 } = require('./determinant.fixture.js')
 
 describe('determinant():', () => {
@@ -55,7 +56,12 @@ describe('determinant():', () => {
       })
     })
 
-    it('3x3')
+    it('3x3', () => {
+      matrix3x3Array.forEach(([matrix, det]) => {
+        assert.strictEqual(determinant(matrix), det)
+      })
+    })
+
     it('any size')
   })
 })
