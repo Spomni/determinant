@@ -25,6 +25,14 @@ function isMatrix(value) {
   return true
 }
 
+function isSquareMatrix(matrix) {
+
+  const m = matrix.length
+  const n = matrix[0].length
+
+  return m === n
+}
+
 class InvalidMatrixError extends TypeError {
   constructor() {
     super('Passed value must be a square matric of numbers')
@@ -33,7 +41,8 @@ class InvalidMatrixError extends TypeError {
 
 function isSquareMatrixOfNumbers(value) {
   if (
-    isMatrix(value)
+    isMatrix(value) &&
+    isSquareMatrix(value)
   ) {
     return true
   } else {

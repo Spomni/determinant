@@ -10,6 +10,21 @@ const notMatrixArray = [
   ],
 ]
 
+const notSquareMatrixArray = [
+  [
+    [1, 2]
+  ],
+  [
+    [1],
+    [2]
+  ],
+  [
+    [11, 12, 13],
+    [21, 22, 23]
+  ],
+]
+
 module.exports = {
   notMatrixArray,
+  notSquareMatrixArray,
 }
