@@ -1,6 +1,6 @@
 {
   "name": "determinant",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Caluculate determinant of the matrix",
   "main": "index.js",
   "directories": {
@@ -11,6 +11,10 @@
   },
   "author": "spomni",
   "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Spomni/determinant"
+  },
   "devDependencies": {
     "chai": "^4.3.6",
     "mocha": "^10.0.0"
