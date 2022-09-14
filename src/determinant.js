@@ -26,6 +26,33 @@ function det3(m) {
   )
 }
 
+function detMinor(matrix, i, j) {
+
+  // clone
+  const M = matrix.map((row) => [...row])
+
+  // remove row i and column j
+  M.splice(i, 1)
+  M.forEach((row) => row.splice(j, 1))
+
+  return det(M)
+}
+
+function detLaplace(matrix) {
+
+  const A = matrix
+  const n = matrix.length
+  const j = 0
+
+  let sum = 0;
+
+  for (let i=0; i<n; i++) {
+    sum += A[i][j] * (-1)**(i + j + 2) * detMinor(A, i, j)
+  }
+
+  return sum
+}
+
 function det(matrix) {
 
   const matrixSize = matrix.length
@@ -41,6 +68,8 @@ function det(matrix) {
   if (matrixSize === 3) {
     return det3(matrix)
   }
+
+  return detLaplace(matrix)
 }
 
 function determinant(matrix) {
