@@ -57,16 +57,16 @@ function det(matrix) {
 
   const matrixSize = matrix.length
 
-  if (matrixSize === 1) {
-    return matrix[0][0]
+  if (matrixSize === 3) {
+    return det3(matrix)
   }
 
   if (matrixSize === 2) {
     return det2(matrix)
   }
 
-  if (matrixSize === 3) {
-    return det3(matrix)
+  if (matrixSize === 1) {
+    return matrix[0][0]
   }
 
   return detLaplace(matrix)
