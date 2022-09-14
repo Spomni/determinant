@@ -11,6 +11,8 @@ const {
   matrixArray,
 } = require('./determinant.fixture.js')
 
+const ERR_MSG = 'Passed value must be a square matrix of numbers'
+
 describe('determinant():', () => {
 
   describe('should throw an error if the passed value is not a square matrix of numbers', () => {
@@ -19,7 +21,8 @@ describe('determinant():', () => {
       notMatrixArray.forEach((value) => {
         assert.throws(
           () => determinant(value),
-          TypeError
+          TypeError,
+          ERR_MSG
         )
       })
     })
@@ -28,7 +31,8 @@ describe('determinant():', () => {
       notSquareMatrixArray.forEach((matrix) => {
         assert.throws(
           () => determinant(matrix),
-          TypeError
+          TypeError,
+          ERR_MSG
         )
       })
     })
@@ -37,7 +41,8 @@ describe('determinant():', () => {
       notMatrixOfNumbersArray.forEach((matrix) => {
         assert.throws(
           () => determinant(matrix),
-          TypeError
+          TypeError,
+          ERR_MSG
         )
       })
     })
