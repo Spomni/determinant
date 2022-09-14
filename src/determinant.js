@@ -28,13 +28,12 @@ function det3(m) {
 
 function detMinor(matrix, i, j) {
 
-  const M = matrix.map((row) => {
-    const rowM = [...row]
-    rowM.splice(j, 1)
-    return rowM
-  })
+  // clone
+  const M = matrix.map((row) => [...row])
 
+  // remove row i and column j
   M.splice(i, 1)
+  M.forEach((row) => row.splice(j, 1))
 
   return det(M)
 }
