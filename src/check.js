@@ -4,13 +4,13 @@ function isArray(value) {
 
 function isMatrix(value) {
 
-  // is array 
-  if (!isArray(value)) return false
+  // is not empty array
+  if (!isArray(value) || !value.length) return false
 
-  // array items are arrays
+  // array items are not empty arrays
   for (let i=0; i<value.length; i++) {
     const item = value[i]
-    if (!isArray(item)) return false
+    if (!isArray(item) || !item.length) return false
   }
 
   // inner arrays have equal lengths
